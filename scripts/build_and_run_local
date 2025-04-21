@@ -1,0 +1,38 @@
+#!/bin/bash
+# This script builds and runs the local version of the app.
+
+cd cms; 
+npm run develop & 
+process2_pid=$!
+
+cd ../;
+cd frontend
+npm start &  \
+process1_pid=$!
+
+cd ../; 
+sass --watch frontend/src/sass/:frontend/src/stylesheets/ & 
+process3_pid=$!
+
+echo "Processes started with PIDs: $process1_pid, $process2_pid, $process3_pid=$!"
+
+# Function to stop the processes
+stop_processes() {
+    echo "Stopping processes..."
+
+    # Send SIGTERM signal to process 1
+    kill $process1_pid
+
+    # Send SIGTERM signal to process 2
+    kill $process2_pid
+
+    kill $process3_pid
+
+    echo "Processes stopped."
+}
+
+# Trap the SIGINT signal (Ctrl+C) to call stop_processes function
+trap 'stop_processes' SIGINT
+
+# Wait for the processes to finish
+wait

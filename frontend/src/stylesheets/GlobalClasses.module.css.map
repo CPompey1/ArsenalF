@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../sass/_global_variables.scss","../sass/GlobalClasses.module.scss"],"names":[],"mappings":"AASA;EACI,WAPwB;EAQxB,aAPgB;EAQhB;EACA;EACA;EACA,OAbiB;;;AAgBrB;EACI,WAhBwB;EAiBxB,aAhBgB;EAiBhB;EACA;EACA;EACA,OAtBiB;;;AAyBrB;EACI,OA1BiB;;;ACDrB;EACI,kBDFY;;;ACMhB;EACI,kBDNc;ECOd,ODNiB;ECOjB;EACA;EACA;EACA","file":"GlobalClasses.module.css"}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_spreading_information_blogs",
+  "info": {
+    "displayName": "Blog",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "sampleImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "information": {
+      "type": "blocks"
+    }
+  }
+}

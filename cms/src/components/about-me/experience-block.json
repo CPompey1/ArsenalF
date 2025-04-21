@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_about_me_experience_blocks",
+  "info": {
+    "displayName": "ExperienceBlock",
+    "icon": "cast",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "title": {
+      "type": "string"
+    },
+    "projectLink": {
+      "type": "string"
+    }
+  }
+}

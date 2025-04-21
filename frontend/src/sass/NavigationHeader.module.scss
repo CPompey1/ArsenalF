@@ -1,0 +1,27 @@
+
+@use 'global_variables';
+@import './_global_variables';
+.navBarContainer {
+    background-color: global_variables.$secondary-color;
+    display: flex;
+    justify-content: space-between;
+    
+    .navBarMenu {
+        color: global_variables.$primary_icon_color;
+        align-self: anchor-center;
+        margin-right: 1%;
+    }
+
+    .navButton {
+        color: global_variables.$primary_icon_color;
+    }
+}
+// .my-component {
+//   background-color: global_theme.$secondary-color;
+//   color: white;
+//   padding: 10px;
+
+//   &:hover {
+//     background-color: darken(global_theme.$primary-color, 10%);
+//   }
+// }

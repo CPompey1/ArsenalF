@@ -1,0 +1,14 @@
+@use 'global_variables';
+.pageBodyContainer{
+    background-color: global_variables.$primary-color;
+    
+}
+
+.footerContainer{
+    background-color: global_variables.$secondary-color;
+    color: global_variables.$primary_text_color;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-top: 5%;
+}

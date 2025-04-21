@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
+import React from "react";
 
 // Put your API key here
 builder.init("6a53bff92dc24a62b49604417a4ec7f2");
@@ -10,7 +11,7 @@ builder.init("6a53bff92dc24a62b49604417a4ec7f2");
 export default function CatchAllRoute() {
   const isPreviewingInBuilder = useIsPreviewing();
   const [notFound, setNotFound] = useState(false);
-  const [content, setContent] = useState(null);
+  const [content, setContent] = useState(undefined);
 
   // get the page content from Builder
    useEffect(() => {
@@ -38,14 +39,14 @@ export default function CatchAllRoute() {
   // The following hypothetical 
   // <FourOhFour> is placeholder.
   if (notFound && !isPreviewingInBuilder) {
-    return <FourOhFour/>
+    return 404
   }
 
   // return the page when found
   return (
     <>
-      {/* Render the Builder page */}
-      <BuilderComponent model="arsenal" content={content} />
+      {/* Render the Builder page content={content */} 
+      <BuilderComponent model="page" content={content}/>
     </>
   );
 }
