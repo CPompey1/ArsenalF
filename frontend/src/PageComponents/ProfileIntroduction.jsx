@@ -46,7 +46,7 @@ function ProfileIntroduction() {
             </Grid>
 
             <div className={styles.descriptionContainer}>
-                <BlocksRenderer content={userInfo.data.description} />
+                <BlocksRenderer content={userInfo.data.description} className={styles.regularText} />
             </div>
 
             

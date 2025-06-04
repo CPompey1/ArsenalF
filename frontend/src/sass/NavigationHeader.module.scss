@@ -15,7 +15,14 @@
     .navButton {
         color: global_variables.$primary_icon_color;
     }
+
+    
 }
+
+.collapsableButtonMenu {
+        background-color: global_variables.$primary-color;
+        margin-left: 1%;
+    }
 // .my-component {
 //   background-color: global_theme.$secondary-color;
 //   color: white;

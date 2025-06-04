@@ -42,19 +42,17 @@
   color: #ffffff;
 }
 
-.pageBodyContainer {
-  background-color: #282a36;
-  display: flex;
-  flex-direction: column;
-}
-
-.footerContainer {
-  background-color: #005bbb;
+.workExperiencesContainer {
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
   color: #ffffff;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding-top: 5%;
+  margin-inline: 2%;
+}
+.workExperiencesContainer .experienceDescription {
+  padding-top: 2%;
+  color: #ffffff;
+  contain: paint;
 }
 
-/*# sourceMappingURL=GlobalClasses.module.css.map */
+/*# sourceMappingURL=WorkExperience.module.css.map */

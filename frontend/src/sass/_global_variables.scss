@@ -20,17 +20,35 @@ $global-page-component-box-shadow: 0px 1px 12px 2px #000000;
     font-size: $secondary-title-font-size;
     font-weight: $title-font-weight;
     margin-bottom: 1rem;
-    text-align: center;
     padding-top: 1%;
     color: $primary_text_color;
+
+}
+
+.secondaryTitleCenter {
+    font-size: $secondary-title-font-size;
+    font-weight: $title-font-weight;
+    margin-bottom: 1rem;
+    padding-top: 1%;
+    color: $primary_text_color;
+    text-align: center;
+}
+
+.thirdTitle {
+    font-size: $secondary-title-font-size;
+    font-weight: $title-font-weight;
+    margin-bottom: 1rem;
+    padding-top: 1%;
+    color: $primary_text_color;
+
+    .thirdTitleCenter {
+        text-align: center;
+    }
+    .thirdTitleLeft {
+        text-align: left;
+    }
 }
 
 .regularText{
     color: $primary_text_color;
 }
-// .experienceTitle{
-//     font-size: 2rem;
-//     font-weight: 700;
-//     margin-bottom: 1rem;
-//     text-align: center;
-// }

@@ -399,6 +399,40 @@ export interface ApiAllProjectExperienceAllProjectExperience
   };
 }
 
+export interface ApiAllWorkExperienceAllWorkExperience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'all_work_experiences';
+  info: {
+    displayName: 'AllWorkExperience';
+    pluralName: 'all-work-experiences';
+    singularName: 'all-work-experience';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    endDate: Schema.Attribute.Date;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::all-work-experience.all-work-experience'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    roleName: Schema.Attribute.String;
+    skillsCsv: Schema.Attribute.String;
+    startDate: Schema.Attribute.Date;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNavigationBarNavigationBar extends Struct.SingleTypeSchema {
   collectionName: 'navigation_bars';
   info: {
@@ -973,6 +1007,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::all-project-experience.all-project-experience': ApiAllProjectExperienceAllProjectExperience;
+      'api::all-work-experience.all-work-experience': ApiAllWorkExperienceAllWorkExperience;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
       'api::profile-personal.profile-personal': ApiProfilePersonalProfilePersonal;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -21,6 +21,7 @@
     "ckeditor5": "^45.0.0",
     "ckeditor5-premium-features": "^45.0.0",
     "husky": "^9.1.7",
+    "material-ui-popup-state": "^5.3.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.0",

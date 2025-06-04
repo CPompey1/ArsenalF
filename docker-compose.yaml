@@ -1,0 +1,26 @@
+services:
+  nginx:
+    build: ./nginx
+    depends_on:
+      - cms
+    ports:
+      - "3000:3000"
+    volumes:
+      - ~/.ssl:/app/.s
+    networks:
+      - mynetwork
+
+  cms:
+    build: ./cms
+    image: strapi:latest
+    environment:
+      - CMS_PORT=1337
+      - NODE_VALUE=production
+    ports:
+      - "1337:1337"
+    networks:
+      - mynetwork
+    
+networks:
+  mynetwork:
+    driver: bridge

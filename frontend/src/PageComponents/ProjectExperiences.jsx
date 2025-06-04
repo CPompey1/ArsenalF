@@ -58,7 +58,7 @@ function ProjectExperiences() {
 function ProjectionExperience({title, description, images, link}) {
     return (
         <>
-            <div className={styles.secondaryTitle}>
+            <div className={styles.secondaryTitleCenter}>
                 <h2 >{title}</h2>
             </div>
             {/* <ExperienceSlideshow images={images} /> */}
@@ -74,7 +74,7 @@ function ProjectionExperience({title, description, images, link}) {
                                             className="d-block w-100"
                                             src={image.url}
                                             alt={image.caption}
-                                            style={{ height: '400px', width: '80%', objectFit: 'cover' }}
+                                            style={{ height: '400px', width: '80%', objectFit: ' scale-down' }}
                                         />
                                     </a>
                                 </CCarouselItem>
@@ -90,85 +90,14 @@ function ProjectionExperience({title, description, images, link}) {
       
             <div className={styles.experienceDescription}>
                 <BlocksRenderer className={styles.regularText} content={description} />
-
-                {/* <CKEditor
-                    onReady={ editor => {
-                        // You can store the "editor" and use when it is needed.
-                        console.log( 'Editor is ready to use!', editor );
-                    } }
-                    onChange={ ( event, editor ) => {
-                        const data = editor.getData();
-                        console.log( { event, editor, data } );
-                    } }
-                /> */}
+                <p className={styles.regularText}>
+                    {link ? 
+                    <a href={link} target="_blank" rel="noopener noreferrer">Link to Project</a> 
+                    : <>Project is private. Please contact me for more details.</>
+                    }
+                </p>
             </div>
         </>
     )
 }
-
-/**
- * 
- * Takes following json strucutre and renders component:
- * {
- *      [
- *          {
- *              "url": "https://www.example.com",
- *              "caption": "Example Caption",
- *              ...
- *           },
- *          
- *          ...
- *      ]
- * }
- */
-// function ExperienceSlideshow({images}){
-//     const slideRef = createRef();
-
-//     const nextPictureClick = () => {
-//         if (slideRef.current !== null) {
-//             slideRef.current.goNext();
-//         }
-//     }
-//     const lastPictureClick = () => {
-//         if (slideRef.current !== null) {
-//             slideRef.current.goBack();
-//         }
-//     }
-//     const properties = {
-//         duration: 5000,
-//         transitionDuration: 500,
-//         infinite: true,
-//         indicators: true,
-//         arrows: false
-//     }
-//     return (
-//         <>
-//             <Grid container spacing={0}>
-                
-//                 <Grid item size={{xs:2 }} className={`${styles.arrowKeyLeft}`} >
-//                     <ArrowBackIosNewIcon sx={{ fontSize: 40 }} onClick={lastPictureClick} />
-//                 </Grid>
-
-//                 <Grid item size={{xs:8}}>
-//                     <div className="slide-container">
-//                         <Slide ref={slideRef} {...properties}>
-//                             {images && images.map((image,index) => (
-//                                 <div style={{ ...divStyle, 'backgroundImage': `url(${image.url})` }}>
-//                                     <span style={spanStyle}>{image.caption}</span>
-//                                 </div>
-//                             ))}
-//                         </Slide>
-//                     </div>
-//                 </Grid>
-
-//                 <Grid item size={{xs:2}} className={styles.arrowKey}>
-//                     <ArrowForwardIosIcon sx={{ fontSize: 40 }}  onClick={nextPictureClick}  />
-//                 </Grid>
-
-//             </Grid>
-            
-//         </>
-//     )
-// }
-
 export default ProjectExperiences

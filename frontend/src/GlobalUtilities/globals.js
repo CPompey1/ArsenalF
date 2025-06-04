@@ -1,14 +1,11 @@
 import React from 'react';
 import { strapi } from '@strapi/client';
 
-export const strapiClient = strapi({
-     baseURL: 'http://localhost:1337/api',
-     auth: 'ad36d88268916f75ccd11115d544896766ba91179ff8b8d0638bf2ac3a4baf8bfd8049fda7e6f74be45dc4e8d2a6ace886df03289595926ed74a0bb53cd8d7c191428ac62b84a3796ee2f05123a1a9ad0d070e57cd7200a76555825304959f7e688f4da436d8596b161e26319316ea2e84e64c23fd92bb386db4d1a5cd600236'
-});
 
-export const STRAPI_BASE_URL = 'http://localhost:1337';
-export const STRAPI_API_URL = 'http://localhost:1337/api';
-export const AUTH = 'ad36d88268916f75ccd11115d544896766ba91179ff8b8d0638bf2ac3a4baf8bfd8049fda7e6f74be45dc4e8d2a6ace886df03289595926ed74a0bb53cd8d7c191428ac62b84a3796ee2f05123a1a9ad0d070e57cd7200a76555825304959f7e688f4da436d8596b161e26319316ea2e84e64c23fd92bb386db4d1a5cd600236'
+export const STRAPI_PROD_URL = "";
+export const STRAPI_BASE_DOMAIN = window.location.href.includes("localhost:3000") ? 'http://localhost:1337' : STRAPI_PROD_URL;
+export const STRAPI_API_URL =  `${STRAPI_BASE_DOMAIN}/api`;
+export const AUTH = 'a5480c90ba4ae67e17d8da4303ada72831e2c8219748d00ccc1fc1f43de673f6bbf5aa70410b742294fceef2f3d5478035f6f552340694af8f200d4802fe2e577065fbb5a5d66634b368871ec0f53868fff0ee513b08bfe307b07b2d2147d934b4bc48c127f12def1e5c36b3f43746afca42216f244d385e4a83ba5ad438ed2c'
 
 export async function getStrapiData(url) {
      const fetchResult = await fetch(url, {

@@ -1,9 +1,12 @@
 
 import { BrowserRouter as BrowserRouter,  Route, Routes } from 'react-router-dom';
 import MainPage from './Pages/MainPage';
+import ProjectPage from './Pages/ProjectPage';
+import WorkExperiencePage from './Pages/WorkExperiencePage';
 function App() {
   const routes = [
-    {"path":"/","element":<MainPage/>}
+    {"path":"/","element":<WorkExperiencePage/>},
+    {"path" :"/projects","element":<ProjectPage/>}
   ];
   return (
     <>

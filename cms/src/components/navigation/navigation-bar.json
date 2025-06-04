@@ -9,6 +9,12 @@
   "attributes": {
     "buttons": {
       "type": "json"
+    },
+    "collapsableButtonsNames": {
+      "type": "json"
+    },
+    "collapsableButtons": {
+      "type": "json"
     }
   }
 }

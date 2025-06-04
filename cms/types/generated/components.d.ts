@@ -41,6 +41,8 @@ export interface NavigationNavigationBar extends Struct.ComponentSchema {
   };
   attributes: {
     buttons: Schema.Attribute.JSON;
+    collapsableButtons: Schema.Attribute.JSON;
+    collapsableButtonsNames: Schema.Attribute.JSON;
   };
 }
 

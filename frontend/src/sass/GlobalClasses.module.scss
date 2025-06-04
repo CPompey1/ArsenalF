@@ -1,7 +1,8 @@
 @use 'global_variables';
 .pageBodyContainer{
     background-color: global_variables.$primary-color;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .footerContainer{
