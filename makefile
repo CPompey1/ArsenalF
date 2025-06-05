@@ -20,3 +20,5 @@ $(FRONTEND_BUILD_SRC): $(PROJ_DIR)/frontend/package.json $(shell find $(PROJ_DIR
 
 strapi_build: $(PROJ_DIR)/cms/package.json $(shell find $(PROJ_DIR)/cms/public $(PROJ_DIR)/cms/src $(PROJ_DIR)/cms/types $(PROJ_DIR)/cms/config -type f)
 	cd $(PROJ_DIR)/cms; npm install --force; npm run build; NODE_ENV=production npm run build; 
+
+
