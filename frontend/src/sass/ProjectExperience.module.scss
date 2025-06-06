@@ -1,0 +1,24 @@
+@use 'global_variables';
+
+.projectExperiencesContainer {
+
+
+    .carrouselImageContainer{ 
+        width: 80%;
+        place-self: center;
+        box-shadow: global_variables.$global-page-component-box-shadow;
+        // object-fit: scale-down;
+
+    }
+    
+    .experienceDescription{
+        justify-self: anchor-center;
+        margin-inline: 17%;
+        padding-top: 2%;
+        color: global_variables.$primary_text_color;
+        contain: paint;
+    }
+
+
+}
+

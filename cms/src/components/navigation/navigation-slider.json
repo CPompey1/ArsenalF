@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_navigation_navigation_sliders",
+  "info": {
+    "displayName": "NavigationSlider",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "buttons": {
+      "type": "json"
+    }
+  }
+}

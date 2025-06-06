@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "all_work_experiences",
+  "info": {
+    "singularName": "all-work-experience",
+    "pluralName": "all-work-experiences",
+    "displayName": "AllWorkExperience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "roleName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "company": {
+      "type": "string"
+    },
+    "skillsCsv": {
+      "type": "string"
+    }
+  }
+}

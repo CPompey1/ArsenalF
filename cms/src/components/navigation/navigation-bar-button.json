@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_navigation_navigation_bar_buttons",
+  "info": {
+    "displayName": "NavigationBarButton",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "buttonInfo": {
+      "type": "json"
+    }
+  }
+}

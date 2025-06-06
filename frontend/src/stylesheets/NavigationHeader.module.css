@@ -1,0 +1,108 @@
+.primaryTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 1%;
+  color: #ffffff;
+}
+
+.secondaryTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-top: 1%;
+  color: #ffffff;
+}
+
+.secondaryTitleCenter {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-top: 1%;
+  color: #ffffff;
+  text-align: center;
+}
+
+.thirdTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-top: 1%;
+  color: #ffffff;
+}
+.thirdTitle .thirdTitleCenter {
+  text-align: center;
+}
+.thirdTitle .thirdTitleLeft {
+  text-align: left;
+}
+
+.regularText {
+  color: #ffffff;
+}
+
+.primaryTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 1%;
+  color: #ffffff;
+}
+
+.secondaryTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-top: 1%;
+  color: #ffffff;
+}
+
+.secondaryTitleCenter {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-top: 1%;
+  color: #ffffff;
+  text-align: center;
+}
+
+.thirdTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-top: 1%;
+  color: #ffffff;
+}
+.thirdTitle .thirdTitleCenter {
+  text-align: center;
+}
+.thirdTitle .thirdTitleLeft {
+  text-align: left;
+}
+
+.regularText {
+  color: #ffffff;
+}
+
+.navBarContainer {
+  background-color: #005bbb;
+  display: flex;
+  justify-content: space-between;
+}
+.navBarContainer .navBarMenu {
+  color: #ffffff;
+  align-self: anchor-center;
+  margin-right: 1%;
+}
+.navBarContainer .navButton {
+  color: #ffffff;
+}
+
+.collapsableButtonMenu {
+  background-color: #282a36;
+  margin-left: 1%;
+}
+
+/*# sourceMappingURL=NavigationHeader.module.css.map */

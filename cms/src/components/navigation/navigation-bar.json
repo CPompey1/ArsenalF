@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_navigation_navigation_bars",
+  "info": {
+    "displayName": "NavigationBar",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "buttons": {
+      "type": "json"
+    },
+    "collapsableButtonsNames": {
+      "type": "json"
+    },
+    "collapsableButtons": {
+      "type": "json"
+    }
+  }
+}

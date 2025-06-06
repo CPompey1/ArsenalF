@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "all_project_experiences",
+  "info": {
+    "singularName": "all-project-experience",
+    "pluralName": "all-project-experiences",
+    "displayName": "AllProjectExperience",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "experience": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-me.experience-block"
+    }
+  }
+}

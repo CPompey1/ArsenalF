@@ -1,0 +1,15 @@
+@use 'global_variables';
+
+.workExperiencesContainer {
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: global_variables.$primary_text_color;
+  margin-inline: 2%;
+
+  .experienceDescription{
+        padding-top: 2%;
+        color: global_variables.$primary_text_color;
+        contain: paint;
+    }
+}
