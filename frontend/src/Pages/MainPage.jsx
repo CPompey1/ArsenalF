@@ -10,6 +10,7 @@ function MainPage() {
   return (
     <>
         <NavigationHeader />
+        
         <div className={styles.pageBodyContainer}>
           <ProfileIntroduction />
           <ProjectExperiences />
