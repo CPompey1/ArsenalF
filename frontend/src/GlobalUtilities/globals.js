@@ -5,7 +5,7 @@ import { strapi } from '@strapi/client';
 export const STRAPI_PROD_URL = "";
 export const STRAPI_BASE_DOMAIN = window.location.href.includes("localhost:3000") ? 'http://localhost:1337' : STRAPI_PROD_URL;
 export const STRAPI_API_URL =  `${STRAPI_BASE_DOMAIN}/api`;
-export const AUTH = 'a5480c90ba4ae67e17d8da4303ada72831e2c8219748d00ccc1fc1f43de673f6bbf5aa70410b742294fceef2f3d5478035f6f552340694af8f200d4802fe2e577065fbb5a5d66634b368871ec0f53868fff0ee513b08bfe307b07b2d2147d934b4bc48c127f12def1e5c36b3f43746afca42216f244d385e4a83ba5ad438ed2c'
+export const AUTH = '4d09894ccd5be51e93ef64d08e49ef2358cc630ab2c307ca1d42ed7442fda7beee1c66e377b726db0ec9ef670cf26f2f863c5ce131b3114ce1925873e65b86e40abce2edf0b53f1d2491c8d122b97d51f27f7636920eca4185c2437d1584495ec1c240f33e4a29984f8a79de3d58bb95079c32060c62f30005488c20b8807654'
 
 export async function getStrapiData(url) {
      const fetchResult = await fetch(url, {
