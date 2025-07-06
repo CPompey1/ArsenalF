@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Check if the correct number of arguments are provided
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 <old_string> <new_string> <directory_path>"
+    exit 1
+fi
+
+old_string="$1"
+new_string="$2"
+directory_path="$3"
+
+# Check if the directory exists
+if [ ! -d "$directory_path" ]; then
+    echo "Error: Directory '$directory_path' not found."
+    exit 1
+fi
+
+# Find files in the specified directory and its subdirectories
+echo "Replaced string '$old_string' with '$new_string' in all files within '$directory_path' ......"
+find "$directory_path" -type f -print0 | while IFS= read -r -d $'\0' file; do
+    # Create a temporary file
+    temp_file=$(mktemp)
+
+    # Use awk to perform the substitution and redirect to the temporary file
+    awk -v old="$old_string" -v new="$new_string" '{gsub(old, new, $0); print $0}' "$file" > "$temp_file"
+
+    # Replace the original file with the temporary file
+    mv "$temp_file" "$file"
+
+    
+done
+
+echo "Replacement complete in all files within '$directory_path'"

@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <new strapi api key>"
+    exit 1
+fi
+
+NEW_API_KEY=$1
+
+docker exec -it $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "/app/replace_strapi_api_key FOOGAZY_TOKEN $NEW_API_KEY /app"
+docker exec -it $(docker ps | grep strapi:latest | awk '{print $1}') sh -c "npm run strapi import -- -f /opt/app/personal-website-strapi-export.tar.gz.enc"
+docker exec -it $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "chmod -R a+rX /app"

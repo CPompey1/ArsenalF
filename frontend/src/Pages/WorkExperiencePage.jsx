@@ -9,13 +9,12 @@ import ProfileIntroduction from '../PageComponents/ProfileIntroduction';
 function WorkExperiencePage() {
   return (
     <>
-    {process.env.REACT_APP_FOO}
-        {/* <NavigationHeader />
+        <NavigationHeader />
         <div className={styles.pageBodyContainer}>
           <ProfileIntroduction />
           <WorkExperiences />
         </div>
-        <Footer /> */}
+        <Footer />
         
     </>
   )
