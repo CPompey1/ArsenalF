@@ -24,7 +24,6 @@ strapi_build: $(PROJ_DIR)/cms/package.json $(shell find $(PROJ_DIR)/cms/public $
 clean: 
 	rm -rf $(FRONTEND_BUILD_TGT) $(PROJ_DIR)/cms/build 
 	rm -rf $(PROJ_DIR)/cms/node_modules $(PROJ_DIR)/frontend/node_modules
-	rm $(PROJ_DIR)/scripts/replace_strapi_api_key
 	
 
 

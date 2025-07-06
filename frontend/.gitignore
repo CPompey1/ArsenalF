@@ -10,6 +10,8 @@
 
 # production
 /build
+replace_strapi_api_key
+# /frontend/src/GlobalUtilities/globals.js
 
 # misc
 .DS_Store
