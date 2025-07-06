@@ -53,12 +53,15 @@ function WorkExperience({role, company, startDate, endDate, description}) {
 
     return (
         <>
-            <div className={styles.secondaryTitle}>
+            <div className={styles.secondaryTitleCenter}>
                 <h2>{role} at {company}</h2>
             </div>
-            <p>
+
+
+            <p className={styles.regularTextCenter}> 
                 {formatMonthYear(startDate)} - {endDate == null ? present : formatMonthYear(endDate)}
             </p>
+          
             <div className={styles.experienceDescription}>
                 <BlocksRenderer content={description} className={styles.regularText} />
             </div>

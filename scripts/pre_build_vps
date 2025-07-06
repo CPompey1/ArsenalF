@@ -1,9 +1,0 @@
-#!/bin/bash
-# This script is run before the deployment of the application.
-# expected to be run in the root of the repository.
-
-
-cd cms; npm run strapi export; cd ../;
-git_push_all "pre_deploy"
-scp cms/my-strapi-export.tar.gz.enc linusvps@165.227.198.132:~/workspace/ArsenalF/cms/
-
