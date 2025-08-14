@@ -433,6 +433,37 @@ export interface ApiAllWorkExperienceAllWorkExperience
   };
 }
 
+export interface ApiContactContact extends Struct.SingleTypeSchema {
+  collectionName: 'contacts';
+  info: {
+    description: '';
+    displayName: 'Contact';
+    pluralName: 'contacts';
+    singularName: 'contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact.contact'
+    > &
+      Schema.Attribute.Private;
+    mobileNumber: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNavigationBarNavigationBar extends Struct.SingleTypeSchema {
   collectionName: 'navigation_bars';
   info: {
@@ -1008,6 +1039,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::all-project-experience.all-project-experience': ApiAllProjectExperienceAllProjectExperience;
       'api::all-work-experience.all-work-experience': ApiAllWorkExperienceAllWorkExperience;
+      'api::contact.contact': ApiContactContact;
       'api::navigation-bar.navigation-bar': ApiNavigationBarNavigationBar;
       'api::profile-personal.profile-personal': ApiProfilePersonalProfilePersonal;
       'plugin::content-releases.release': PluginContentReleasesRelease;

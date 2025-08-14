@@ -42,12 +42,17 @@
   color: #ffffff;
 }
 
+.regularTextCenter {
+  text-align: center;
+  color: #ffffff;
+}
+
 .workExperiencesContainer {
   align-items: center;
   margin-top: 2%;
   margin-bottom: 2%;
   color: #ffffff;
-  margin-inline: 2%;
+  margin-inline: 7%;
 }
 .workExperiencesContainer .experienceDescription {
   padding-top: 2%;

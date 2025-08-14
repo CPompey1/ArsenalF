@@ -1,0 +1,10 @@
+@use 'global_variables';
+.contactMeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: global_variables.$primary-color;
+    padding-bottom: 70%;
+}
