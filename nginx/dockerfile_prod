@@ -6,7 +6,7 @@ COPY build .
 
 RUN apt-get update && apt-get install -y gettext-base
 
-COPY nginx_configuration.conf /etc/nginx/nginx.conf
+COPY nginx_configuration_prod.conf /etc/nginx/nginx.conf
 
 CMD ["nginx", "-g", "daemon off;"]
 
