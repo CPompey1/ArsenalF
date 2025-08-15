@@ -14,3 +14,5 @@ docker exec -it $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "chm
 
 # Obtain SSL certificates
 docker exec -it $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "certbot certonly --webroot -w /app -d  cristian.pompey.linushome.com"
+
+docker exec -it $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "goaccess /var/log/nginx/access.log -o /app/report.html --log-format=COMBINED --real-time-html"

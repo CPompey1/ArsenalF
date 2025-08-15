@@ -24,17 +24,6 @@ services:
     networks:
       - mynetwork
 
-  goaccess:
-    image: allinurl/goaccess:latest
-    volumes:
-      - ./nginx_logs:/srv/logs:ro # Mount Nginx logs read-only
-      - ./goaccess_reports:/var/www/html # For HTML reports
-    ports:
-      - "7890:7890" # Port for real-time HTML reports
-    command: /srv/logs/access.log --log-format=COMBINED -o /var/www/html/index.html --real-time-html --port=7890
-    depends_on:
-      - nginx
-      - cms
 networks:
   mynetwork:
     driver: bridge
