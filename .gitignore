@@ -1,0 +1,3 @@
+goaccess_reports/
+nginx/#nginx_configuration_prod.conf#
+scripts/#replace_strapi_api_key#

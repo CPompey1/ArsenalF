@@ -5,8 +5,12 @@ services:
       - cms
     ports:
       - "3000:3000"
+      - "443:443"
+      - "80:80"
+      - "7890:7890"
     volumes:
       - ~/.ssl:/app/.s
+      - ~/nginx_logs:/var/log/nginx/
     networks:
       - mynetwork
 
@@ -20,7 +24,7 @@ services:
       - "1337:1337"
     networks:
       - mynetwork
-    
+
 networks:
   mynetwork:
     driver: bridge

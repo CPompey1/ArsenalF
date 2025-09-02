@@ -5,6 +5,11 @@ develop_up:
 	./scripts/build_and_run_local
 
 docker_up: nginx_build
+	cp $(PROJ_DIR)/nginx/dockerfile_dev $(PROJ_DIR)/nginx/dockerfile 
+	docker compose up --build --force-recreate
+
+prod_up: nginx_build
+	cp $(PROJ_DIR)/nginx/dockerfile_prod $(PROJ_DIR)/nginx/dockerfile 
 	docker compose up --build --force-recreate
 
 frontend_build: $(FRONTEND_BUILD_TGT)
