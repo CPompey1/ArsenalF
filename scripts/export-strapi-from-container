@@ -1,4 +1,4 @@
 #!/bin/bash
-docker exec -it $(docker ps | grep strapi:latest | awk '{print $1}') sh -c "npm run strapi export -- --file  personal-website-strapi-export.tar.gz"
+docker exec -it $(docker ps | grep strapi:latest | awk '{print $1}') sh -c "npm run strapi export -- --file  personal-website-strapi-export"
 
 docker cp $(docker ps | grep strapi:latest | awk '{print $1}'):/opt/app/personal-website-strapi-export.tar.gz.enc ~/ArsenalF/cms/personal-website-strapi-export.tar.gz.enc
