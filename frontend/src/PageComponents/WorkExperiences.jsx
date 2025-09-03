@@ -1,6 +1,6 @@
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import React, { useEffect, useState } from 'react'
-import { getStrapiData, sortExperienceByEndDate } from '../GlobalUtilities/globals';
+import { getStrapiData, skillsCsvToBulletPoints, sortExperienceByEndDate } from '../GlobalUtilities/globals';
 import styles from '../stylesheets/WorkExperience.module.css';
 function WorkExperiences() {
 
@@ -32,6 +32,7 @@ function WorkExperiences() {
                             startDate={workExperience.startDate} 
                             endDate={workExperience.endDate} 
                             description={workExperience.description}
+                            skills={workExperience.skillsCsv}
                         />
                     
                     ))}
@@ -42,7 +43,7 @@ function WorkExperiences() {
   )
 }
 
-function WorkExperience({role, company, startDate, endDate, description}) {
+function WorkExperience({role, company, startDate, endDate, description, skills}) {
     const present = "Present";
 
     // Helper to format ISO date string to "Month YYYY"
@@ -65,6 +66,11 @@ function WorkExperience({role, company, startDate, endDate, description}) {
           
             <div className={styles.experienceDescription}>
                 <BlocksRenderer content={description} className={styles.regularText} />
+            </div>
+
+            <div style={{marginLeft: '2%'}}>
+                {skills && <div className={styles.thirdTitle}>Skills:</div>}
+                {skills && skillsCsvToBulletPoints(skills)}
             </div>
         </>
     )

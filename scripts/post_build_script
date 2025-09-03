@@ -15,4 +15,8 @@ docker exec -it $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "chm
 # Obtain SSL certificates
 docker exec -it $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "certbot certonly --webroot -w /app -d  cristian.pompey.linushome.com"
 
+# Schedule automatic renewal of SSL certificates 
+docker exec -it $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "SLEEPTIME=$(awk 'BEGIN{srand(); print int(rand()*(3600+1))}'); echo "0 0,12 * * * root sleep $SLEEPTIME && certbot renew -q" | sudo tee -a /etc/crontab > /dev/null"
+
 docker exec $(docker ps | grep arsenalf-nginx | awk '{print $1}') sh -c "goaccess /var/log/nginx/access.log -o /app/report.html --log-format=COMBINED --real-time-html"
+    
