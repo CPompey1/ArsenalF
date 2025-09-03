@@ -17,5 +17,14 @@ export async function getStrapiData(url) {
     return await fetchResult.json();
 }    
 
+export function sortExperienceByEndDate(experiences){
+    return experiences.sort((a, b) => {
+        const dateA = a.endDate ? new Date(a.endDate) : new Date();
+        console.log(dateA);
+        const dateB = b.endDate ? new Date(b.endDate) : new Date();
+        return dateB - dateA; // Sort in ascending order (earliest first)
+    });
+}
+
 
 

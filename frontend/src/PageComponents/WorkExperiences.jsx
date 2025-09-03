@@ -1,6 +1,6 @@
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import React, { useEffect, useState } from 'react'
-import { getStrapiData } from '../GlobalUtilities/globals';
+import { getStrapiData, sortExperienceByEndDate } from '../GlobalUtilities/globals';
 import styles from '../stylesheets/WorkExperience.module.css';
 function WorkExperiences() {
 
@@ -10,6 +10,7 @@ function WorkExperiences() {
     useEffect(() => {
         const fetchData = async () => {
             const fetchResult = await getStrapiData('/api/all-work-experiences')
+            sortExperienceByEndDate(fetchResult.data);
             setWorkExperiences(fetchResult);
             setLoading(false);
             console.log(fetchResult);
